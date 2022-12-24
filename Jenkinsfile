@@ -15,7 +15,8 @@ pipeline {
 
         stage('Build') {
             steps {
-                dir()
+                dir('simple-java-maven-app.git')
+                sh 'mvn clean install'
             }
         }
     }
