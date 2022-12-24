@@ -12,5 +12,11 @@ pipeline {
                 sh 'git clone https://github.com/jenkins-docs/simple-java-maven-app.git'
             }
         }
+
+        stage('Build') {
+            steps {
+                dir()
+            }
+        }
     }
 }
