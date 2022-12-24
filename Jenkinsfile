@@ -15,8 +15,17 @@ pipeline {
 
         stage('Build') {
             steps {
-                dir('simple-java-maven-app.git')
-                sh 'mvn clean install'
+                dir('simple-java-maven-app') {
+                    sh 'mvn -Denforcer.skip=true clean install'
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                dir('simple-java-maven-app') {
+                    sh 'mvn -Denforcer.skip=true test'
+                }
             }
         }
     }
