@@ -34,5 +34,11 @@ pipeline {
                 build 'FunctionDemoPipeline'
             }
         }
+        
+        stage('Pass parameters to a different Job') {
+            steps {
+                build  job: 'BooleanParamPipeline',parameters: [[$class: 'BooleanParameterValue', name: 'isOnCloud',value:true]]
+            }
+        }
     }
 }
