@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    environment{
+        def  country = 'India'
+    }
+    stages {
+        stage('Functions Demo') {
+            steps {
+                myFunc('This is text from function demo stage')
+                echo "${country}"
+            }
+        }
+    }
+}
+
+def myFunc (String myText) {
+    echo "${myText.toUpperCase()}"
+    echo "${country}"
+}
