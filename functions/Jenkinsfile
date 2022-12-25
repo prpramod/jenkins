@@ -8,6 +8,11 @@ pipeline {
             steps {
                 myFunc('This is text from function demo stage')
                 echo "${country}"
+                sh """
+                   echo $PWD
+                   ls
+                   df -kh
+                  """
             }
         }
     }
