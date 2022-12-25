@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    environment {
+        def myString = 'Pramod says hello'
+        def myNumber = 125
+        def myBool = false
+    }
+    stages {
+        stage('Print Variables') {
+            steps {
+                echo "String:${myString}"
+                echo "Number:${myNumber}"
+                echo "Boolean:${myBool}"
+            }
+        }
+    }
+}
