@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    environment {
+     topSecret =  credentials('TopSecret')
+    }
+    stages {
+        stage('Example') {
+            steps {
+                echo "Running  Build number ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                echo "Secret is out: ${topSecret}"
+            }
+        }
+    }
+}

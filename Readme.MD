@@ -51,5 +51,5 @@ Recursively deletes the current directory and its contents. Symbolic links and j
 Java Maven App Sample: https://github.com/jenkins-docs/simple-java-maven-app.git
 
 
-#Build Success log 
-#Console output 
+# Predefined variables in Jenkins 
+https://www.jenkins.io/doc/book/pipeline/jenkinsfile/#using-environment-variables
