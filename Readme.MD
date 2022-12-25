@@ -53,3 +53,6 @@ Java Maven App Sample: https://github.com/jenkins-docs/simple-java-maven-app.git
 
 # Predefined variables in Jenkins 
 https://www.jenkins.io/doc/book/pipeline/jenkinsfile/#using-environment-variables
+
+# Groovy language syntax 
+https://groovy-lang.org/syntax.html

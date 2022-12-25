@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    parameters {
+        booleanParam(defaultValue: false, description: 'Deploy to Cloud?', name: 'isOnCloud')
+    }
+
+    stages {
+        stage('Demo') {
+            steps {
+                script {
+                    if (params.isOnCloud == false) {
+                        currentBuild.result = 'SUCCESS'
+                    }
+                else
+                {
+                        echo 'booleanParam is set to: TRUE'
+                }
+
+                }
+            }
+        }
+    }
+}
